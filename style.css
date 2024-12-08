@@ -78,7 +78,7 @@
     left: 30px;  /* lado esquerdo */
 }
 #next {
-    right: 30px; /* lado direito */
+    right: 31px; /* lado direito */
 }
 
 @keyframes toActive { /* keyframes é um efeito de animação, toactive é o nome aleatório para ser identificado */

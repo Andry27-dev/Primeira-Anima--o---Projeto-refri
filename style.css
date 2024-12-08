@@ -70,7 +70,7 @@
     font-size: x-large; /* automatico */
     font-family: monospace; /*  */
     cursor: pointer; /* mãozinha */
-    z-index: 4; /* na frene dos outros item */
+    z-index: 5; /* na frene dos outros item */
     border-radius: 50%; /* arrendondar bordas */
 }
 /* as id's estavam do mesmo lado e para isso foi necessario posicioná-las e lados opostos */
@@ -89,7 +89,7 @@
     }
 }
 .item.active img.fruta {
-    animation: toActive 0.5s /* tempo da transição */
+    animation: toActive 0.6s /* tempo da transição */
     ease-in-out 1; /* numero de repetições do efeito */
 }
 .item.active .title {

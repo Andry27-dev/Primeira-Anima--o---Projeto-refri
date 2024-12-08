@@ -1,0 +1,38 @@
+<!DOCTYPE html> <!-- site -->
+<html lang="pt-br"> <!-- idioma portugues Brasil -->
+
+<head> <!-- Cabeça do Site, Configurações, abertura-->
+    <meta charset="UTF-8"> <!-- é o tipo de letra a ser usado, chines ou hebraico UTF-8 inclui o Brasil -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projeto Refri</title> <!-- Titulo do Site -->
+</head> <!-- fechamento -->
+
+<body> <!-- corpo do site, abertura -->
+    <main>
+        <div class="item active" style="--background: #EA3D41">
+            <div class="title">Morango</div>
+            <img src="./img/Morango-refrigerante-foregroundBlur.png" class="fruta">
+            <img src="./img/Morango-refrigerante.png" class="refri">
+        </div>
+
+        <div class="item" style="--background: #e7a043">
+            <div class="title">Laranja</div>
+            <img src="./img/Laranja-refrigerante-foregroundBlur.png" class="fruta">
+            <img src="./img/Laranja-refrigerante.png" class="refri">
+        </div>
+
+        <div class="item" style="--background: #2d5643">
+            <div class="title">Abacate</div>
+            <img src="./img/Abacate-refrigerante-foregroundBlur.png" class="fruta">
+            <img src="./img/Abacate-refrigerante.png" class="refri">  
+        </div>
+
+        <div class="arrow">
+            <button id="prev"> < </button> <!-- voltar -->
+            <button id="next"> > </button> <!-- avançar -->
+        </div>
+    </main>
+</body>
+<script src="scripts.js"></script>
+</html>

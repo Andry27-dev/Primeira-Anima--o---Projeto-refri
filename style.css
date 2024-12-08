@@ -1,0 +1,97 @@
+.item { /* estilo da classe item */
+    display: none;
+    /* não aparecer */
+    width: 100%;
+    /* ocupar todo espaço */
+    height: 100%;
+    /* ocupar todo espaço */
+    position: absolute;
+    /* exatamente aonde eu quero */
+    top: 0;
+    /* posição de cima */
+    left: 0;
+    /* posição da esquerda */
+    overflow: hidden;
+    /* caso ele fique grande não quero scrow na tela. util para criar uma váriavel, um valor no caso um background*/
+    background-color: var(--background);
+    /* é uma informação vindo do html */
+}
+.item.active { /* estilo da classe item juntamente com a classe active */
+    display: block; /* display visivel */
+}
+
+.item .title { /* dentro da classe item, estilizar a classe titulo */
+    font-size: 12rem;
+    /* tamanho das letras do titulo */
+    color: #ffffff;
+    /* cor da letra do titulo*/
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* estilo da letra */
+    font-weight: bold;
+    /* letra do titulo em negrito */
+    text-align: center;
+    /* titulo centralizado */
+
+    /* as tag abaixo servem como macete para centralizar o que eu quiser */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.item .fruta { /* dentro da classe item, estilizar a classe fruta img */
+    width: 90%;
+    /* para ocupar quase toda a tela */
+    position: absolute;
+    /* para deixar fixado */
+    top: 0;
+    /* para ficar no topo */
+    z-index: 3;
+    /* serve para trazer a frente das demais imagens ou itens */
+}
+
+.item .refri { /* dentro da classe item, estilizar a classe refri img */
+    z-index: 2;
+    width: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#prev, #next { /* estilizando a id prev e a id next que são os botões no site */
+    position: absolute;
+    top: 50%; /* no centro em relação ao eixo vertical */
+    transform: translateY(-50%); /* aqui centralizará apenas no eixo Y */
+    width: 50px;
+    height: 50px;
+    background-color: #eee9; /* transparente */
+    border: 1px solid #eee9; /* borda */
+    color: #eee; /* cor */
+    font-size: x-large; /* automatico */
+    font-family: monospace; /*  */
+    cursor: pointer; /* mãozinha */
+    z-index: 4; /* na frene dos outros item */
+    border-radius: 50%; /* arrendondar bordas */
+}
+/* as id's estavam do mesmo lado e para isso foi necessario posicioná-las e lados opostos */
+#prev {
+    left: 30px;  /* lado esquerdo */
+}
+#next {
+    right: 30px; /* lado direito */
+}
+
+@keyframes toActive { /* keyframes é um efeito de animação, toactive é o nome aleatório para ser identificado */
+    
+    from {
+        top: 100%; /* os itens vão ficar 100% distantes do topo */
+        opacity: 0; /* os itens não estarão invisiveis e aparecerão depois do click */
+    }
+}
+.item.active img.fruta {
+    animation: toActive 0.5s /* tempo da transição */
+    ease-in-out 1; /* numero de repetições do efeito */
+}
+.item.active .title {
+    animation: toActive 0.5s ease-in-out 1;
+    }
